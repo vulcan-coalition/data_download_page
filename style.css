@@ -33,11 +33,6 @@
     margin-bottom: 6rem;
 }
 
-.py-6 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-}
-
 
 /*** Heading ***/
 h1,
@@ -231,7 +226,7 @@ h6,
 .hero-header {
     margin-bottom: 6rem;
     padding: 9rem 0;
-    background: url(../img/bg-bottom.png) center bottom no-repeat;
+    background: url(./img/bg-bottom.png) center bottom no-repeat;
 }
 
 @media (max-width: 991.98px) {
