@@ -28,10 +28,6 @@
     z-index: 99;
 }
 
-.my-6 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-}
 
 
 /*** Heading ***/
@@ -51,6 +47,9 @@ h5,
 h6,
 .fw-medium {
     font-weight: 500 !important;
+}
+.link_text{
+    color: #858585
 }
 
 
@@ -237,126 +236,6 @@ h6,
 }
 
 
-/*** Feature ***/
-.feature-item,
-.advanced-feature-item {
-    height: 100%;
-    transition: .5s;
-}
-
-.feature-item:hover {
-    margin-top: -15px;
-}
-
-.advanced-feature-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-}
-
-.advanced-feature-item * {
-    transition: .5s;
-}
-
-.advanced-feature-item:hover {
-    background: var(--primary);
-}
-
-.advanced-feature-item:hover * {
-    color: #FFFFFF !important;
-}
-
-
-/*** Process ***/
-.process {
-    padding: 0;
-    list-style: none;
-}
-
-.process li {
-    position: relative;
-    display: flex;
-    padding-bottom: 25px;
-}
-
-.process li::after {
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 100%;
-    top: 0;
-    left: 20px;
-    background: var(--primary);
-}
-
-.process li:last-child {
-    padding-bottom: 0;
-}
-
-.process li:last-child:after {
-    display: none;
-}
-
-.process li span {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: #FFFFFF;
-    background: var(--primary);
-    border-radius: 40px;
-    z-index: 1;
-}
-
-.process li p {
-    margin: 0;
-}
-
-
-/*** Price ***/
-.price-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transition: .5s;
-}
-
-.price-item:hover {
-    margin-top: -10px;
-}
-
-
-/*** Testimonial ***/
-.testimonial-carousel .testimonial-item {
-    padding: 0 30px 30px 30px;
-}
-
-.testimonial-carousel .owl-nav {
-    display: flex;
-    justify-content: center;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    margin: 0 12px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    background: var(--light);
-    border-radius: 60px;
-    font-size: 22px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-}
 
 
 /*** Footer ***/
