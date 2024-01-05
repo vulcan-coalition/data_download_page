@@ -59,6 +59,10 @@ h6,
     position: relative;
     overflow: hidden;
 }
+.back-to-top-btn{
+    transition: .5s;
+    overflow: hidden;
+}
 
 .btn:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);

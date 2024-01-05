@@ -30,8 +30,8 @@
             event.preventDefault();
             
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 60
-            }, 1500, 'easeInOutExpo');
+                scrollTop: $(this.hash).offset().top - 80
+            }, 500, 'easeInOutExpo');
             
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
@@ -42,6 +42,7 @@
     
     
     // Back to top button
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow');
@@ -50,7 +51,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 500, 'easeInOutExpo');
         return false;
     });
 
