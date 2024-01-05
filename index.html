@@ -71,7 +71,9 @@
                 <div class="text-center">
                     <p class="mb-4">This dataset is the Thai language speech open dataset from the Vulcan Coalition.</p>
                     <p>Each audio point is either transcribed or recorded by a person with a disability, so the quality of each file may vary in terms of the recording device used.</p>
-                    <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">DOWNLOAD DATASET </a>
+                    
+                    <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3" id="downloadButton" onclick="startDownload()">DOWNLOAD DATASET</a>
+                    <div id="progressBar" class="progress-bar"></div>
                     <p class="mb-4">File size : ... GB </p>    
                 </div>
             </div>

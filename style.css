@@ -57,6 +57,8 @@ h6,
 /*** Button ***/
 .btn {
     transition: .5s;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn:hover {
@@ -463,3 +465,12 @@ h6,
     background-color:var(--primary);;
     color: white;
   }
+
+.progress-bar {
+    width: 0;
+    height: 5px;
+    background-color: blue;
+    transition: width 2s;
+    border-radius: 5px;
+    margin-top: 5px;
+}
