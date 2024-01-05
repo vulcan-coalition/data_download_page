@@ -1,6 +1,6 @@
 /********** Template CSSprimary hero-header **********/
 :root {
-    --primary: #4AC4F3;/****#4AC4F3*****/
+    --primary: #38286A;/****#4AC4F3*****/
     --light: #EDF5FF;
     --dark: #202942;
 }
@@ -456,6 +456,7 @@ h6,
   
 .vertical-menu a:hover {
     background-color: var(--primary);
+    color: #eee
   }
   
 .vertical-menu a.active {

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Vulcan dataset</title>
+    <title>Vulcan tts dataset</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -35,8 +35,8 @@
             <!-- Navbar & Hero Start -->
             <div class="container-fluid position-relative p-0" id="home">
                 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top shadow-sm">
-                    <a href="" class="navbar-brand p-0">
-                        <h1 class="m-0">Vulcan Dataset</h1>
+                    <a href="https://www.vulcancoalition.org/" class="navbar-brand p-0">
+                        <img src="./img/Vulcan_logo.png"  alt="Vulcan Logo">
                     </a>
                     <button class="navbar-toggler rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -44,6 +44,7 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav mx-auto py-0">
                             <a href="#home" class="nav-item nav-link active">Home</a>
+                            <a href="#Information" class="nav-item nav-link">Data Information</a>
                             <a href="#sample" class="nav-item nav-link">Sample data</a>
                             <a href="#format" class="nav-item nav-link">File format</a>
                             <a href="#parts" class="nav-item nav-link">Dataset Parts</a>
@@ -51,13 +52,16 @@
                             <a href="#Credits" class="nav-item nav-link">Credits</a>
                         </div>
                     </div>
+                    <a href="https://www.depa.or.th/" class="navbar-brand p-0">
+                        <img src="./img/DEPA_logo.png"  alt="Vulcan Logo">
+                    </a>
                 </nav>
 
                 <div class="container-fluid bg-primary hero-header">
                     <div class="container">
                         <div class="row g-5 align-items-center">
                             <div class="col-lg-6 text-center text-lg-start">
-                                <h1 class="text-white mb-4 animated slideInDown">Thai language TTS dataset</h1>
+                                <h1 class="text-white mb-4 animated slideInDown">Vulcan Thai language TTS dataset</h1>
                                 <p class="text-white pb-3 animated slideInDown">Open dataset of thai speech and text that show ablity and possibility from disability</p>
                         </div>
                     </div>
@@ -65,14 +69,23 @@
             </div>
             <div class="container">
                 <div class="text-center">
-                    <p class="mb-4">This dataset is the thai language speech open dataset from Vulcan coalition.Each data are either transcribe or recorded by disability person so the quality of each file might differ in term of recording device</p>
-
+                    <p class="mb-4">This dataset is the Thai language speech open dataset from the Vulcan Coalition.</p>
+                    <p>Each audio point is either transcribed or recorded by a person with a disability, so the quality of each file may vary in terms of the recording device used.</p>
                     <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">DOWNLOAD DATASET </a>
-                        
+                    <p class="mb-4">File size : ... GB </p>    
                 </div>
             </div>
         </div>
         <!-- Navbar & Hero End -->
+        <div class="container-fluid bg-light my-6 py-5" id="Information">
+            <div class="container">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-4">Data Information</h1>
+                    <p class="mb-4">The dataset zip file will have 2 main part the transcription are given in the csv file.while,the recording sound will be .mp3 file in the folder names record</p>
+                                
+                </div>
+            </div>
+        </div>
 
         <!-- About Start -->
         <div class="container-fluid py-6" id="sample">
@@ -152,17 +165,20 @@
         <!-- Advanced Feature Start -->
         <div class="container-fluid py-6" id="parts">
             <div class="container">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="mb-3">Dataset part</h1>
-                    <p class="mb-4">If you did not want to download the entire RAW dataset in a single file, different parts of the dataset can be downloaded individually: </p>
-                        
-                    <div class="vertical-menu">
-                    <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 01 File size:  0000 GB</a>
-                    <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 02 File size:  0000 GB</a>
-                    <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 03 File size:  0000 GB</a>
-                    <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 04 File size:  0000 GB</a>
-                    <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 05 File size:  0000 GB</a>
-                </div>      
+                <div class="row g-5">
+                    <div class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-3">Dataset part</h1>
+                        <p class="mb-4">If you did not want to download the entire RAW dataset in a single file, different parts of the dataset can be downloaded individually: </p>
+                        <div class="vertical-menu">
+                            <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 01 File size:  0000 GB</a>
+                            <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 02 File size:  0000 GB</a>
+                            <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 03 File size:  0000 GB</a>
+                            <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 04 File size:  0000 GB</a>
+                            <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 05 File size:  0000 GB</a>
+                        </div>
+                        <p class="mb-4">If you did not want to download the entire RAW dataset in a single file, different parts of the dataset can be downloaded individually: </p>
+                    </div> 
+                </div>    
             </div>
         </div>
         <!-- Advanced Feature End -->
@@ -170,9 +186,11 @@
         <!-- Acknowledgment Start -->
         <div class="container-fluid py-6" id="Acknowledgment">
             <div class="container">
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="mb-3">Acknowledgment</h1>
-                    <p class="mb-4">This dataset got a fund from Digital Economy Promotion Agency of Thailand.</p>
+                <div class="row g-6"></div>
+                    <div class="wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-3">Acknowledgment</h1>
+                        <p class="mb-4">This dataset got a fund from Digital Economy Promotion Agency of Thailand.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,11 +202,11 @@
                 <div class="row g-5">
                     <div class="wow fadeInUp" data-wow-delay="0.1s">
                         <h1 class="mb-3">Credits</h1>
-                        <p class="mb-4">This work is in the public domain, you may use it. However, if you'd like to cite it, please do so by linking to this page or using the following:</p>
+                        <p class="mb-4">This work is in the public domain and may be used freely. However, if you wish to cite it, please do so by linking to this page or using the following citation format:</p>
                     </div>
                     <div class="cite">
                         Owner        = {Vulcan coalition},
-                        title        = {Vulcan TTS Dataset},
+                        title        = {Vulcan Thai language TTS dataset},
                         howpublished = {\url{https://www.vulcancoalition.org/Vulcan-Dataset/}},
                         year         = 2023
                     </div>
@@ -201,7 +219,10 @@
         <div class="row bg-dark text-body footer wow fadeIn" data-wow-delay="0.1s">
             <div class=" px-lg-5">
                 <div class="text-white text-center">
-                    <a href="https://www.vulcancoalition.org/">© Copyright 2023 vulcancoalition.org All rights reserved.</a>
+                    <p>© Copyright 2023
+                    <a href="https://www.vulcancoalition.org/">vulcancoalition.org</a>
+                    All rights reserved.
+                    </p>
                 </div>
             </div>
         </div>
