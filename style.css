@@ -321,8 +321,8 @@ h6,
   }
 
 .vertical-menu {
-    width: 500px;
-    height: 150px;
+    width: 700px;
+    height: 300px;
     overflow-X: auto;
     overflow-y: auto;
   }
