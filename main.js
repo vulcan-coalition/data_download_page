@@ -78,20 +78,17 @@
     });
 
     //dowload bar
-    function startDownload() {
-        var elem = document.getElementById("progressBar"); 
-        var width = 1;
-        var id = setInterval(frame, 100);
+    function startDownload(url, progressBarId, fileName) {
+        const progressBar = document.getElementById(progressBarId);
+        progressBar.style.width = '100%'; // Fill the progress bar
     
-        function frame() {
-            if (width >= 100) {
-                clearInterval(id);
-            } else {
-                width++; 
-                elem.style.width = width + '%'; 
-            }
-        }
+        // Simulate download (open in new tab/window)
+        window.open(url, '_blank');
+    
+        // Save the download status in local storage
+        localStorage.setItem(fileName, 'downloaded');
     }
+    
 
     // Function to open a specific tab
     function openTab(evt, tabName) {
@@ -134,52 +131,33 @@
             const downloadItem = document.createElement('div');
             downloadItem.className = 'download-item';
     
-            // Create the anchor (download link) element
             const anchor = document.createElement('a');
             anchor.href = item["Public URL"];
             anchor.textContent = item["Filename"] + " - Size: " + item["Size"] + " MB";
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
-                startDownload(anchor.href, 'progress-' + index);
+                startDownload(anchor.href, 'progress-' + index, item["Filename"]);
             });
     
-            // Create the progress bar container
             const progressBarContainer = document.createElement('div');
             progressBarContainer.className = 'progress-bar-line-container';
     
-            // Create the progress bar itself
             const progressBar = document.createElement('div');
             progressBar.className = 'progress-bar-line';
             progressBar.id = 'progress-' + index;
     
-            // Append the progress bar to its container
-            progressBarContainer.appendChild(progressBar);
+            // Check if the file has been downloaded before
+            if (localStorage.getItem(item["Filename"]) === 'downloaded') {
+                progressBar.style.width = '100%'; // Show full progress bar
+            }
     
-            // Append the anchor and progress bar container to the download item
+            progressBarContainer.appendChild(progressBar);
             downloadItem.appendChild(anchor);
             downloadItem.appendChild(progressBarContainer);
-    
-            // Append the download item to the file list container
             fileListContainer.appendChild(downloadItem);
         });
     }
     
-
-    function startDownload(url, progressBarId) {
-        const progressBar = document.getElementById(progressBarId);
-        let width = 0;
-        const id = setInterval(frame, 100);
-    
-        function frame() {
-            if (width >= 100) {
-                clearInterval(id);
-                window.location.href = url; // Start the download
-            } else {
-                width++;
-                progressBar.style.width = width + '%';
-            }
-        }
-    }
 
     
 
