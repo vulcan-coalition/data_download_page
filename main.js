@@ -168,7 +168,6 @@
         }
     }
 
-    }
     
 
     // Usage example for each JSON file and container ID
