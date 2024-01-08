@@ -130,29 +130,54 @@
     function createDownloadList(data, containerId) {
         const fileListContainer = document.getElementById(containerId);
     
-        data.forEach(item => {
+        data.forEach((item, index) => {
             const downloadItem = document.createElement('div');
             downloadItem.className = 'download-item';
     
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.id = 'checkbox-' + item["Filename"];
-            checkbox.setAttribute('data-link', item["Public URL"]);
+            const anchor = document.createElement('a');
+            anchor.href = item["Public URL"];
+            anchor.textContent = item["Filename"] + " - Size: " + item["Size"] + " GB";
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                startDownload(anchor.href, 'progress-' + index);
+            });
     
-            const label = document.createElement('label');
-            label.htmlFor = 'checkbox-' + item["Filename"];
-            label.textContent = item["Filename"] + " -- File Size: " + item["Size"] + " GB";
+            const progressBar = document.createElement('div');
+            progressBar.className = 'progress-bar';
+            progressBar.id = 'progress-' + index;
     
-            downloadItem.appendChild(checkbox);
-            downloadItem.appendChild(label);
+            downloadItem.appendChild(anchor);
+            downloadItem.appendChild(progressBar);
             fileListContainer.appendChild(downloadItem);
         });
     }
+
+    function startDownload(url, progressBarId) {
+        const progressBar = document.getElementById(progressBarId);
+        let width = 0;
+        const id = setInterval(frame, 100);
+    
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                window.location.href = url; // Start the download
+            } else {
+                width++;
+                progressBar.style.width = width + '%';
+            }
+        }
+    }
+    
+    }
     
     document.getElementById('downloadSelected').addEventListener('click', function() {
-        document.querySelectorAll('.vertical-menu input[type="checkbox"]:checked').forEach(function(checkbox) {
-            const fileLink = checkbox.getAttribute('data-link');
-            window.open(fileLink, '_blank'); // Open each file in a new tab
+        const checkedBoxes = document.querySelectorAll('.vertical-menu input[type="checkbox"]:checked');
+    
+        checkedBoxes.forEach((checkbox, index) => {
+            setTimeout(() => {
+                const fileLink = checkbox.getAttribute('data-link');
+                window.open(fileLink, '_blank');
+            }, index * 1000); // Delay each download by 1 second
         });
     });
 
