@@ -136,18 +136,21 @@
     
             const anchor = document.createElement('a');
             anchor.href = item["Public URL"];
-            anchor.textContent = item["Filename"] + " - Size: " + item["Size"] + " GB";
+            anchor.textContent = item["Filename"] + " - Size: " + item["Size"] + " MB";
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
                 startDownload(anchor.href, 'progress-' + index);
             });
     
+            const progressBarContainer = document.createElement('div');
+            progressBarContainer.className = 'progress-bar-line-container';
+
             const progressBar = document.createElement('div');
             progressBar.className = 'progress-bar-line';
             progressBar.id = 'progress-' + index;
-    
-            downloadItem.appendChild(anchor);
-            downloadItem.appendChild(progressBar);
+
+            progressBarContainer.appendChild(progressBar);
+            downloadItem.appendChild(progressBarContainer);
             fileListContainer.appendChild(downloadItem);
         });
     }
@@ -169,6 +172,7 @@
     }
 
     
+
 
     // Usage example for each JSON file and container ID
     loadJsonData('./img/file_upload_linkL1.json', 'fileListTab1');
