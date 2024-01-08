@@ -325,10 +325,12 @@ h6,
   }
 
 .vertical-menu {
-    width: 700px;
+    width: 70%;
+    max-width: 700px;
     height: 300px;
     overflow-x: auto;
     overflow-y: auto;
+    margin: auto;
     list-style-type: none; /* If you decide to use <li> for each item */
     padding: 0; /* If you decide to use <li> for each item */
 }
@@ -367,18 +369,14 @@ h6,
 
 
 .progress-bar-line-container {
-    width: 200px; /* Fixed width of the entire bar */
-    height: 20px;
-    background-color: #ddd; /* Background of the bar */
-    border-radius: 5px;
-    overflow: hidden; /* Ensures the inner bar doesn't exceed the container */
+    flex-basis: 30%; /* Adjust this value as needed */
+    margin-left: 10px;
 }
 
 .progress-bar-line {
-    height: 100%;
-    background-color: rgb(77, 3, 80);
-    width: 0%; /* Initial width of the inner bar */
-    border-radius: 5px; /* Optional: for rounded corners */
+    width: 0;
+    height: 20px;
+    background-color: green;
     transition: width 0.5s ease-in-out;
 }
 
@@ -421,7 +419,15 @@ h6,
 }
 
 .download-item {
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out items */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Optional: for visual separation of items */
 }
 
+.download-item a {
+    flex-grow: 1; /* Allows the filename to take up available space */
+    margin-right: 10px; /* Space between filename and progress bar */
+}
   
