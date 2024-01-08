@@ -134,6 +134,7 @@
             const downloadItem = document.createElement('div');
             downloadItem.className = 'download-item';
     
+            // Create the anchor (download link) element
             const anchor = document.createElement('a');
             anchor.href = item["Public URL"];
             anchor.textContent = item["Filename"] + " - Size: " + item["Size"] + " MB";
@@ -142,18 +143,27 @@
                 startDownload(anchor.href, 'progress-' + index);
             });
     
+            // Create the progress bar container
             const progressBarContainer = document.createElement('div');
             progressBarContainer.className = 'progress-bar-line-container';
-
+    
+            // Create the progress bar itself
             const progressBar = document.createElement('div');
             progressBar.className = 'progress-bar-line';
             progressBar.id = 'progress-' + index;
-
+    
+            // Append the progress bar to its container
             progressBarContainer.appendChild(progressBar);
+    
+            // Append the anchor and progress bar container to the download item
+            downloadItem.appendChild(anchor);
             downloadItem.appendChild(progressBarContainer);
+    
+            // Append the download item to the file list container
             fileListContainer.appendChild(downloadItem);
         });
     }
+    
 
     function startDownload(url, progressBarId) {
         const progressBar = document.getElementById(progressBarId);
