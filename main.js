@@ -130,20 +130,31 @@
     function createDownloadList(data, containerId) {
         const fileListContainer = document.getElementById(containerId);
     
-        data.forEach(item => {
+        data.forEach((item, index) => {
             const downloadItem = document.createElement('div');
             downloadItem.className = 'download-item';
     
-            const anchor = document.createElement('a');
-            anchor.href = item["Public URL"];
-            anchor.textContent = item["Filename"];
-            anchor.target = "_blank"; // Open in new tab
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = 'file-' + index;
+            checkbox.setAttribute('data-link', item["Public URL"]);
     
-            downloadItem.appendChild(anchor);
+            const label = document.createElement('label');
+            label.htmlFor = 'file-' + index;
+            label.textContent = item["Filename"];
+    
+            downloadItem.appendChild(checkbox);
+            downloadItem.appendChild(label);
             fileListContainer.appendChild(downloadItem);
         });
     }
-    
+    document.getElementById('downloadSelected').addEventListener('click', function() {
+        document.querySelectorAll('.vertical-menu input[type="checkbox"]:checked').forEach(function(checkbox) {
+            const fileLink = checkbox.getAttribute('data-link');
+            window.open(fileLink, '_blank'); // Open each file in a new tab
+        });
+    });
+
     // Usage example for each JSON file and container ID
     loadJsonData('./img/file_upload_linkL1.json', 'fileListTab1');
     loadJsonData('./img/file_upload_linkL1.json', 'fileListTab2');

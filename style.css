@@ -327,27 +327,34 @@ h6,
 .vertical-menu {
     width: 700px;
     height: 300px;
-    overflow-X: auto;
+    overflow-x: auto;
     overflow-y: auto;
-  }
-  
-.vertical-menu a {
+    list-style-type: none; /* If you decide to use <li> for each item */
+    padding: 0; /* If you decide to use <li> for each item */
+}
+
+.vertical-menu .download-item {
     background-color: #eee;
     color: black;
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 12px;
-    text-decoration: none;
-  }
-  
-.vertical-menu a:hover {
+}
+
+.vertical-menu .download-item:hover {
     background-color: var(--primary);
-    color: #eee
-  }
-  
-.vertical-menu a.active {
-    background-color:var(--primary);;
     color: white;
-  }
+}
+
+.vertical-menu .download-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.vertical-menu .download-item label {
+    flex-grow: 1; /* Ensures the label takes up the remaining space */
+    cursor: pointer;
+}
+
 
 .progress-bar {
     width: 0;
