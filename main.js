@@ -143,7 +143,7 @@
             });
     
             const progressBar = document.createElement('div');
-            progressBar.className = 'progress-bar';
+            progressBar.className = 'progress-bar-line';
             progressBar.id = 'progress-' + index;
     
             downloadItem.appendChild(anchor);
@@ -167,19 +167,9 @@
             }
         }
     }
-    
+
     }
     
-    document.getElementById('downloadSelected').addEventListener('click', function() {
-        const checkedBoxes = document.querySelectorAll('.vertical-menu input[type="checkbox"]:checked');
-    
-        checkedBoxes.forEach((checkbox, index) => {
-            setTimeout(() => {
-                const fileLink = checkbox.getAttribute('data-link');
-                window.open(fileLink, '_blank');
-            }, index * 1000); // Delay each download by 1 second
-        });
-    });
 
     // Usage example for each JSON file and container ID
     loadJsonData('./img/file_upload_linkL1.json', 'fileListTab1');
