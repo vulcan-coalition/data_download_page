@@ -167,6 +167,26 @@
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="mb-3">Dataset part</h1>
                     <p class="mb-4">If you did not want to download the entire RAW dataset in a single file, different parts of the dataset can be downloaded individually: </p>
+                    <!-- Tab test  Start -->
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTab(event, 'Large')">Large</button>
+                        <button class="tablinks" onclick="openTab(event, 'Medium')">Medium</button>
+                        <button class="tablinks" onclick="openTab(event, 'Small')">Small</button>
+                    </div>
+                      
+                    <div id="Large" class="tabcontent">
+                        <div id="fileListTab1" class="vertical-menu"></div>
+                    </div>
+                      
+                    <div id="Medium" class="tabcontent">
+                        <div id="fileListTab2" class="vertical-menu"></div>
+                    </div>
+                      
+                    <div id="Small" class="tabcontent">
+                        <div id="fileListTab3" class="vertical-menu"></div>
+                    </div>
+                      
+                    <!-- Tab test  Start -->
                     <div class="vertical-menu">
                         <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 01 File size:  0000 GB</a>
                         <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/test/voice-20231006T061605Z-001.zip">Sub-Dataset 02 File size:  0000 GB</a>

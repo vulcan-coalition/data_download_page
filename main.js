@@ -92,6 +92,59 @@
             }
         }
     }
+
+    // Function to open a specific tab
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    async function loadJsonData(jsonFilePath, containerId) {
+        try {
+            const response = await fetch(jsonFilePath);
+            const data = await response.json();
+    
+            createDownloadList(data, containerId);
+        } catch (error) {
+            console.error('Error fetching or parsing JSON:', error);
+        }
+    }
+    
+    function createDownloadList(data, containerId) {
+        const fileListContainer = document.getElementById(containerId);
+    
+        data.forEach(item => {
+            const downloadItem = document.createElement('div');
+            downloadItem.className = 'download-item';
+    
+            const anchor = document.createElement('a');
+            anchor.href = item["Public URL"];
+            anchor.textContent = item["Filename"];
+            anchor.target = "_blank"; // Open in new tab
+    
+            downloadItem.appendChild(anchor);
+            fileListContainer.appendChild(downloadItem);
+        });
+    }
+    
+    // Usage example for each JSON file and container ID
+    loadJsonData('./img/file_upload_linkL1.json', 'fileListTab1');
+    loadJsonData('./img/file_upload_linkL1.json', 'fileListTab2');
+    loadJsonData('./img/file_upload_linkL1.json', 'fileListTab3');
+    
+
+    
+    
+    
+  
     
     
     
