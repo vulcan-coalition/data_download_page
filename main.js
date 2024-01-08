@@ -130,24 +130,25 @@
     function createDownloadList(data, containerId) {
         const fileListContainer = document.getElementById(containerId);
     
-        data.forEach((item, index) => {
+        data.forEach(item => {
             const downloadItem = document.createElement('div');
             downloadItem.className = 'download-item';
     
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            checkbox.id = 'file-' + index;
+            checkbox.id = 'checkbox-' + item["Filename"];
             checkbox.setAttribute('data-link', item["Public URL"]);
     
             const label = document.createElement('label');
-            label.htmlFor = 'file-' + index;
-            label.textContent = item["Filename"];
+            label.htmlFor = 'checkbox-' + item["Filename"];
+            label.textContent = item["Filename"] + " -- File Size: " + item["Size"] + " GB";
     
             downloadItem.appendChild(checkbox);
             downloadItem.appendChild(label);
             fileListContainer.appendChild(downloadItem);
         });
     }
+    
     document.getElementById('downloadSelected').addEventListener('click', function() {
         document.querySelectorAll('.vertical-menu input[type="checkbox"]:checked').forEach(function(checkbox) {
             const fileLink = checkbox.getAttribute('data-link');
