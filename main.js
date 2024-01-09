@@ -163,9 +163,9 @@
 
 
     // Usage example for each JSON file and container ID
-    loadJsonData('./img/file_upload_linkL1.json', 'fileListTab1');
-    loadJsonData('./img/file_upload_linkL1.json', 'fileListTab2');
-    loadJsonData('./img/file_upload_linkL1.json', 'fileListTab3');
+    loadJsonData('./img/file_upload_linkl.json', 'fileListTab1');
+    loadJsonData('./img/file_upload_linkm.json', 'fileListTab2');
+    loadJsonData('./img/file_upload_links.json', 'fileListTab3');
     
 
     
