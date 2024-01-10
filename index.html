@@ -61,7 +61,7 @@
                         <div class="row g-5 align-items-center">
                             <div class="col-lg-6 text-center text-lg-start">
                                 <h1 class="text-white mb-4 animated slideInDown">Depa x Vulcan <br> Thai language TTS dataset</h1>
-                                <p class="text-white pb-3 animated slideInDown">This dataset is the Thai language speech open dataset from the Vulcan Coalition.<br>This project is sponsored by Thailand Digital Economy Promotion Agency.<br>Each audio point is either transcribed or recorded by a person with a disability, so the quality of each file may vary in terms of the recording device used.</p>
+                                <p class="text-white pb-3 animated slideInDown">This open Thai language speech collection, is a product of the Vulcan Coalition.<br>The project receives sponsorship from the Thailand Digital Economy Promotion Agency.<br>Each audio file in the dataset has been either transcribed or recorded by individuals with disabilities. As a result, there may be variations in quality due to the differing recording devices used.</p>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,9 @@
                     <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/fulldatset/VulcanDepaDataset.zip" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3" id="downloadButton" onclick="startDownload()">DOWNLOAD DATASET</a>
                     <div id="progressBar" class="progress-bar"></div>
                     <p class="mb-4">File size : 128 GB <br>
-                        <a class="link_text mb-4" href="#parts" >*click here to download small dataset or separately download each part of dataset</a>  
+                        <p class="mb-4">Click the button above to download the entire dataset in one package, or 
+                        <a href="#parts" >*click here</a>  
+                        to download each part of the dataset separately.</p>
                     </p>
                 </div>
             </div>
@@ -81,7 +83,7 @@
             <div class="container" id="Information">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="mb-4">Data Information</h1>
-                    <p class="mb-4">The dataset zip file will have 2 main part the transcription are given in the csv file.while,the recording sound will be .mp3 file in the folder names record</p>
+                    <p class="mb-4">The dataset is organized into two main groups within the zip file. The main 'group' contains data with superior voice quality, while the 'secondary_group' features recordings of lower quality, which may be useful for handling noisy data, low volume, or voices with dialects. Each folder in the dataset includes a transcription in a CSV file, named identically to the folder, and the audio recordings are provided in .flac format.</p>
                                 
                 </div>
             </div>
@@ -102,8 +104,8 @@
                                 </div>
                         
                             <div>
-                                <h5>First Example: Data with Less Noise</h5>
-                                <p class="mb-2">Instruction - อ่านข้อความ: ดูภาพสดห้องนอนชั้น 3</p>
+                                <h5>First Example: Data with good quality</h5>
+                                <p class="mb-2">ปิดลำโพงห้องนอนชั้น 2 in main group</p>
                                     <audio controls>
                                         <source src="./img/sound_ex1.flac" type="audio/flac">
                                         Your browser does not support the audio element.
@@ -118,8 +120,8 @@
                                     <span class="visually-hidden">Checked</span>
                                 </div>
                                 <div>
-                                    <h5>Second Example: Data with More Noise</h5>
-                                    <p class="mb-2">Instruction - อ่านข้อความ: เปิด</p>
+                                    <h5>Second Example: Data with less quality in secondary group</h5>
+                                    <p class="mb-2">แอร์โหมดcoolห้องนั่งเล่นชั้น 1 </p>
                                     <audio controls>
                                         <source src="./img/sound_ex2.flac" type="audio/flac">
                                         Your browser does not support the audio element.
@@ -135,8 +137,8 @@
                                     <span class="visually-hidden">Checked</span>
                                 </div>
                                 <div>
-                                    <h5>Third Example: Data with Dialect</h5>
-                                    <p class="mb-2">Instruction - อ่านข้อความ: เปิด</p>
+                                    <h5>Third Example: Data with Dialect in secondary group</h5>
+                                    <p class="mb-2">ความสว่าง 26 ห้องนั้งเล่น ในอีก 8 ชั่วโมง 30 นาที</p>
                                     <audio controls>
                                         <source src="./img/sound_ex3.flac" type="audio/flac">
                                         Your browser does not support the audio element.
