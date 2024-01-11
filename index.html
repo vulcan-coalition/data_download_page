@@ -36,7 +36,7 @@
             <div class="container-fluid position-relative p-0" id="home">
                 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top shadow-sm">
                     <a href="https://www.depa.or.th/" class="navbar-brand p-0">
-                        <img src="./img/DEPA_logo.png"  alt="Vulcan Logo">
+                        <img src="./img/DEPA_logo.png"  alt="DEPA Logo">
                     </a>
                     <a href="https://www.vulcancoalition.org/" class="navbar-brand p-0">
                         <img src="./img/Vulcan_logo.png"  alt="Vulcan Logo">
@@ -157,8 +157,13 @@
         <div class="container" id="format">
             <div class="wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-4">File Format</h1>
-                <p class="mb-4">The CSV provided contains two column headers: 'filepath' and 'instruction'. The 'filepath' column lists the names of the files, indicating the location of each voice recording within the dataset. The 'instruction' column details the specific directives and spoken content given by the data provider to each individual who recorded the voice files.</p>
-                            
+                <p class="mb-4">The CSV provided contains two column headers: 'filepath' and 'instruction'. The 'filepath' column lists the names of the files, indicating the location of each voice recording within the dataset. The 'instruction' column details the specific directives and spoken content given by the data provider to each individual who recorded the voice files.Each CSV file are encripted with UTF-8 and the instruction are in Thai.</p>
+                <h5>Main Group :</h5> 
+                <p class="mb-4">The main group contains higher quality voice data and includes a total of 498,175 files.</p>
+                  
+                <h5>Secondary Group :</h5> 
+                <p class="mb-4">The 'secondary group' contains lower quality voice data, useful for processing challenges such as background noise or dialects, and has a total of 141,667 files.</p>
+                   
             </div>
         </div>
         <!-- Overview End -->
@@ -168,7 +173,23 @@
             <div class="row g-6">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="mb-3">Dataset part</h1>
-                    <p class="mb-4">If you did not want to download the entire RAW dataset in a single file, different parts of the dataset can be downloaded individually: </p>
+                    <p class="mb-4">To facilitate ease of access and accommodate various bandwidth capabilities, the dataset has been segmented into subfolders and is available for download in three different sizes: Large, Medium, and Small. </p>
+                    <h5>Large Tab:</h5>
+                    <p class="mb-4">- Intended for users with a robust internet connection.<br>
+                        - Each zip file contains 100,000 files from either the main group (total of 498,175 files) or the secondary group (total of 141,667 files).<br>
+                        - Accompanying each batch is a CSV file with data corresponding to these files, bearing the same name as the zip file.<br>
+                        - The size of each Large zip file is approximately 21,000 MB.
+                    </p>
+                    <h5>Medium Tab:</h5>
+                    <p class="mb-4">- Each zip file contains 10,000 files, catering to users with moderate download capacity.<br>
+                        - Like the Large tab, each Medium zip file is paired with a CSV containing data for its respective files and shares the same naming convention.<br>
+                        - The size of each Medium zip file is about 2,100 MB.
+                    </p>
+                    <h5>Small Tab:</h5>
+                    <p class="mb-4">- Ideal for preliminary testing or users with unstable internet connections.<br>
+                        - Each zip file comprises 1,000 files, following the structure of the Medium and Large tabs.<br>
+                        - The size of each Small zip file is around 210 MB.
+                    </p>
                     <!-- Tab test  Start -->
                     <div class="tab">
                         <button class="tablinks">Large</button>
@@ -187,7 +208,12 @@
                     <div id="Small" class="tabcontent">
                         <div id="fileListTab3" class="vertical-menu"></div>
                     </div>
-                    <p class="mb-4">If you did not want to download the entire RAW dataset in a single file, different parts of the dataset can be downloaded individually: </p>
+                    <p class="mb-4">Please note:</p>
+                    <p class="mb-4">- Combining the first 10 files from the smaller size group will yield an equivalent dataset to the first file of the next larger size group.<br>
+                        - Downloading all the zip files within a chosen size category will provide the complete dataset, identical to downloading the full dataset in one go.
+                    </p>
+                    <p class="mb-4">Choose the tab that best suits your needs to begin downloading the subfolders of the dataset.</p>
+
                 </div>    
             </div>
         </div>
@@ -198,9 +224,9 @@
             <div class="row g-6"></div>
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="mb-3">Acknowledgment</h1>
-                    <p class="mb-4">This dataset got a fund from Digital Economy Promotion Agency of Thailand.</p>
+                    <p class="mb-4">The project receives sponsorship from the Thailand Digital Economy Promotion Agency.</p>
                     <a href="https://www.depa.or.th/" class="navbar-brand p-0">
-                        <img src="./img/DEPA_logo.png"  alt="Vulcan Logo">
+                        <img src="./img/DEPA_logo.png"  alt="DEPA Logo">
                     </a>
                 </div>
             </div>
@@ -240,7 +266,7 @@
         <!-- Footer End -->
         <!-- Back to Top -->
     </div>
-    <a href="#home" class="back-to-top-btn-lg text-white btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#home" class="back-to-top-btn-lg text-white btn-primary btn-lg-square back-to-top" alt="Back to top"><i class="bi bi-arrow-up"></i></a>
     <div>
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
