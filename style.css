@@ -1,8 +1,8 @@
 /********** Template CSSprimary hero-header **********/
 :root {
     --primary: #38286A;/****#4AC4F3*****/
-    --light: #EDF5FF;
-    --dark: #202942;
+    --light: #dad2f3;;
+    --dark: #1b1629;
 }
 
 
@@ -227,15 +227,41 @@ h6,
 }
 
 
-/*** Hero Header ***/
 .hero-header {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     padding: 9rem 0;
+    background-image: url('./img/TTS dataset-BG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: left;
+}
+
+.hero-logo {
+    width: 50%;
+    max-width: 500px; /* Adjust as needed */
+    margin-right: 20px; /* Space between logo and text */
 }
 
 @media (max-width: 991.98px) {
     .hero-header {
         padding: 6rem 0 9rem 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-logo {
+        width: 80%;
+        margin: 0 auto 20px; /* Center the logo */
     }
 }
 
@@ -431,3 +457,7 @@ h6,
     margin-right: 10px; /* Space between filename and progress bar */
 }
   
+.container, .row {
+    margin: 0;
+    padding: 0;
+}
