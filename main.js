@@ -157,15 +157,23 @@
             fileListContainer.appendChild(downloadItem);
         });
     }
+    function toggleVisibility(elementId) {
+        var element = document.getElementById(elementId);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
     
 
     
 
 
     // Usage example for each JSON file and container ID
-    loadJsonData('./img/file_upload_linkl.json', 'fileListTab1');
-    loadJsonData('./img/file_upload_linkm.json', 'fileListTab2');
-    loadJsonData('./img/file_upload_links.json', 'fileListTab3');
+    loadJsonData('./img/file_upload_linkl.json', "fileListLarge");
+    loadJsonData('./img/file_upload_linkm.json', "fileListMedium");
+    loadJsonData('./img/file_upload_links.json', "fileListSmall");
     
 
     
