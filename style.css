@@ -350,13 +350,13 @@ h6,
     white-space: pre-wrap;
   }
 
-  .vertical-menu {
+.vertical-menu {
     width: 95%;
     max-width: 700px;
     height: 300px;
     overflow-x: auto;
     overflow-y: auto;
-    margin: auto;
+    margin-left: 0; /* Align to the left */
     list-style-type: none;
     padding: 0;
 }
