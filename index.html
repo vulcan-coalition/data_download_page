@@ -46,7 +46,6 @@
                             <a href="#home" class="nav-item nav-link active" alt="Home">Home</a>
                             <a href="#Information" class="nav-item nav-link">Data Information</a>
                             <a href="#sample" class="nav-item nav-link">Sample data</a>
-                            <a href="#format" class="nav-item nav-link">File format</a>
                             <a href="#prtial_download" class="nav-item nav-link">Partial Download</a>
                             <a href="#Acknowledgment" class="nav-item nav-link">Acknowledgment</a>
                             <a href="#Credits" class="nav-item nav-link">Credits</a>
@@ -65,6 +64,7 @@
                                     <h1 class="text-white mb-4">Smart Home Thai language TTS dataset</h1>
                                     <p class="text-white pb-3 animated slideInDown">
                                         This open Thai language speech collection, is a product of the Vulcan Coalition.
+                                        <br>This dataset is designed specifically for voice command recognition in smart home devices. It comprises a comprehensive collection of voice recordings that are used to facilitate the development and improvement of voice-activated control systems within a smart home environment. These recordings include a variety of commands that one would typically use to interact with smart home technology, such as turning lights on and off, or adjusting the thermostat.
                                         <br>The project receives sponsorship from the Thailand Digital Economy Promotion Agency.
                                         <br>Each audio file in the dataset has been either transcribed or recorded by individuals with disabilities. As a result, there may be variations in quality due to the differing recording devices used.
                                     </p>
@@ -92,7 +92,13 @@
                         <div class="wow fadeInUp" data-wow-delay="0.1s">
                             <h1 class="mb-4">Data Information</h1>
                             <p class="mb-4">The dataset is organized into two main groups within the zip file. The main 'group' contains data with superior voice quality, while the 'secondary_group' features recordings of lower quality, which may be useful for handling noisy data, low volume, or voices with dialects. Each folder in the dataset includes a transcription in a CSV file, named identically to the folder, and the audio recordings are provided in .flac format.</p>
-                                        
+                            <p class="mb-4">
+                                The provided CSV features two columns: 'filepath' and 'instruction'. The 'filepath' column enumerates the file names, designating the location of each voice recording in the dataset. The 'instruction' column outlines the precise instructions and spoken content issued by the data provider to the individuals recording the files. Each CSV file is encoded in UTF-8, and the instructions are provided in Thai.
+                            </p>
+                            <h5>Main Group : </h5> 
+                            <p class="mb-4">The main group contains higher quality voice data and includes a total of 498,175 files.</p>
+                            <h5>Secondary Group :</h5> 
+                            <p class="mb-4">Secondary Group :The 'secondary group' contains lower quality voice data, useful for processing challenges such as background noise or dialects, and has a total of 141,667 files.</p>
                         </div>
                     </div>
                 </div>
@@ -160,23 +166,6 @@
             
             <!-- Overview Start -->
             <div class="container-fluid bg-light my-6 py-5">
-                <div class="container" id="format">
-                    <div class="row g-6">
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <h1 class="mb-4">File Format</h1>
-                            <p class="mb-4">
-                                The provided CSV features two columns: 'filepath' and 'instruction'. The 'filepath' column enumerates the file names, designating the location of each voice recording in the dataset. The 'instruction' column outlines the precise instructions and spoken content issued by the data provider to the individuals recording the files. Each CSV file is encoded in UTF-8, and the instructions are provided in Thai.<br>
-                                This dataset is designed specifically for voice command recognition in smart home devices. It comprises a comprehensive collection of voice recordings that are used to facilitate the development and improvement of voice-activated control systems within a smart home environment. These recordings include a variety of commands that one would typically use to interact with smart home technology, such as turning lights on and off, or adjusting the thermostat.
-                            </p>
-                            <h5>Main Group : </h5> 
-                            <p class="mb-4">The main group contains higher quality voice data and includes a total of 498,175 files.</p>
-                            <h5>Secondary Group :</h5> 
-                            <p class="mb-4">Secondary Group :The 'secondary group' contains lower quality voice data, useful for processing challenges such as background noise or dialects, and has a total of 141,667 files.</p>
-                        </div>
-                    </div>    
-                </div>
-
-                <!-- Overview End -->
 
                 <!-- Advanced Feature Start -->
                 <div class="container" id="prtial_download">
