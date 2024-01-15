@@ -79,16 +79,14 @@
     });
 
     //dowload bar
-    function startDownload(url, progressBarId, fileName) {
-        const progressBar = document.getElementById(progressBarId);
-        progressBar.style.width = '100%'; // Fill the progress bar
+    function startDownload(url, buttonId, fileName) {
+        const downloadButton = document.getElementById(buttonId);
     
-        // Simulate download (open in new tab/window)
         window.open(url, '_blank');
-    
-        // Save the download status in local storage
         localStorage.setItem(fileName, 'downloaded');
+        downloadButton.src = './img/check.png'; 
     }
+    
     
 
     // Function to open a specific tab
@@ -135,56 +133,36 @@
             const anchor = document.createElement('a');
             anchor.href = item["Public URL"];
     
-            // Determine if the file size should be displayed in MB or GB
+            // File size formatting (MB or GB)
             let fileSize = parseFloat(item["Size"]);
-            let formattedSize;
-            if (fileSize >= 1024) {
-                formattedSize = (fileSize / 1024).toFixed(2).toLocaleString() + " GB";
-            } else {
-                formattedSize = fileSize.toLocaleString() + " MB";
-            }
-    
+            let formattedSize = fileSize >= 1024 ? (fileSize / 1024).toFixed(2).toLocaleString() + " GB" : fileSize.toLocaleString() + " MB";
             anchor.textContent = item["Filename"] + " - Size: " + formattedSize;
     
             // Image button creation
             const imgButton = document.createElement('img');
-            imgButton.src = './img/download.png'; 
+            imgButton.src = './img/download.png'
             imgButton.className = 'download-button';
-            imgButton.id = 'download_button-' + index;
+            imgButton.id = 'button-' + index;
+            imgButton.style.width = '5 px';  // Set the width
+            imgButton.style.height = '5 px';
     
-            anchor.addEventListener('click', (e) => {
+            // Update the button on click and start the download
+            imgButton.addEventListener('click', (e) => {
                 e.preventDefault();
-                startDownload(anchor.href, 'download_button-' + index, item["Filename"]);
+                startDownload(anchor.href, imgButton.id, item["Filename"]);
             });
     
-            // Update image to a checkmark when the download is complete
-            function updateDownloadStatus(progressElementId) {
-                const progressElement = document.getElementById(progressElementId);
-                if (localStorage.getItem(item["Filename"]) === 'downloaded') {
-                    progressElement.src = './img/check.png'; 
-                }
-            }
-    
+            // Append elements to the download item and container
             downloadItem.appendChild(anchor);
             downloadItem.appendChild(imgButton);
             fileListContainer.appendChild(downloadItem);
-    
-            // Check if the file has been downloaded before and update the button
-            updateDownloadStatus('button-' + index);
+            if (localStorage.getItem(item["Filename"]) === 'downloaded') {
+                imgButton.src = './img/check.png' 
+            }
         });
     }
     
-    
-    
-    
-    function toggleVisibility(elementId) {
-        var element = document.getElementById(elementId);
-        if (element.style.display === "none") {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
-    }
+
     
 
     // Usage example for each JSON file and container ID
