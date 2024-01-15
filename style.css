@@ -457,4 +457,10 @@ h6,
     flex-grow: 1; /* Allows the filename to take up available space */
     margin-right: 10px; /* Space between filename and progress bar */
 }
+
+.download-button {
+    width: 10px;
+    height: 10px;
+}
+
   
