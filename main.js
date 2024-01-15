@@ -143,8 +143,6 @@
             imgButton.src = './img/download.png'
             imgButton.className = 'download-button';
             imgButton.id = 'button-' + index;
-            imgButton.style.width = '15 px';  // Set the width
-            imgButton.style.height = '15 px';
     
             // Update the button on click and start the download
             imgButton.addEventListener('click', (e) => {

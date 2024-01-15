@@ -367,6 +367,8 @@ h6,
     margin-left: 0; /* Align to the left */
     list-style-type: none;
     padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 50px;
 }
 
 .vertical-menu .download-item {
