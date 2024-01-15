@@ -133,7 +133,11 @@
     
             const anchor = document.createElement('a');
             anchor.href = item["Public URL"];
-            anchor.textContent = item["Filename"] + " - Size: " + item["Size"] + " MB";
+    
+            // Format the file size as a floating-point number
+            const formattedSize = parseFloat(item["Size"]).toLocaleString();
+            anchor.textContent = item["Filename"] + " - Size: " + formattedSize + " MB";
+    
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
                 startDownload(anchor.href, 'progress-' + index, item["Filename"]);
@@ -157,6 +161,7 @@
             fileListContainer.appendChild(downloadItem);
         });
     }
+    
     
     function toggleVisibility(elementId) {
         var element = document.getElementById(elementId);
