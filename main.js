@@ -146,29 +146,34 @@
     
             anchor.textContent = item["Filename"] + " - Size: " + formattedSize;
     
+            // Image button creation
+            const imgButton = document.createElement('img');
+            imgButton.src = './img/download.png'; 
+            imgButton.className = 'download-button';
+            imgButton.id = 'download_button-' + index;
+    
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
-                startDownload(anchor.href, 'progress-' + index, item["Filename"]);
+                startDownload(anchor.href, 'download_button-' + index, item["Filename"]);
             });
     
-            const progressBarContainer = document.createElement('div');
-            progressBarContainer.className = 'progress-bar-line-container';
-    
-            const progressBar = document.createElement('div');
-            progressBar.className = 'progress-bar-line';
-            progressBar.id = 'progress-' + index;
-    
-            // Check if the file has been downloaded before
-            if (localStorage.getItem(item["Filename"]) === 'downloaded') {
-                progressBar.style.width = '100%'; // Show full progress bar
+            // Update image to a checkmark when the download is complete
+            function updateDownloadStatus(progressElementId) {
+                const progressElement = document.getElementById(progressElementId);
+                if (localStorage.getItem(item["Filename"]) === 'downloaded') {
+                    progressElement.src = './img/check.png'; 
+                }
             }
     
-            progressBarContainer.appendChild(progressBar);
             downloadItem.appendChild(anchor);
-            downloadItem.appendChild(progressBarContainer);
+            downloadItem.appendChild(imgButton);
             fileListContainer.appendChild(downloadItem);
+    
+            // Check if the file has been downloaded before and update the button
+            updateDownloadStatus('button-' + index);
         });
     }
+    
     
     
     
