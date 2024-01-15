@@ -48,7 +48,9 @@ h4,
     font-weight: 600 !important;
 }
 
-h5,
+h5{
+    padding: 35px 0;
+}
 h6,
 .fw-medium {
     font-weight: 500 !important;
