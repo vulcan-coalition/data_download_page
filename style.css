@@ -48,7 +48,9 @@ h4,
     font-weight: 600 !important;
 }
 
-h5,
+h5{
+    padding: 15px 0;
+},
 h6,
 .fw-medium {
     font-weight: 500 !important;
@@ -364,7 +366,7 @@ h6,
     overflow-y: auto;
     margin-left: 0; /* Align to the left */
     list-style-type: none;
-    padding: 35px 0;
+    padding: 0;
     margin-bottom: 3re
 }
 
