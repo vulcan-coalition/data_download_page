@@ -367,7 +367,6 @@ h6,
     margin-left: 0; /* Align to the left */
     list-style-type: none;
     padding: 0;
-    margin-bottom: 3re
 }
 
 .vertical-menu .download-item {
@@ -459,8 +458,8 @@ h6,
 }
 
 .download-button {
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
 }
 
   
