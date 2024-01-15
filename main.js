@@ -30,7 +30,7 @@
             event.preventDefault();
             
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 80
+                scrollTop: $(this.hash).offset().top - 40
             }, 500, 'easeInOutExpo');
             
             if ($(this).parents('.navbar-nav').length) {
@@ -39,6 +39,7 @@
             }
         }
     });
+    
     
     
     // Back to top button
