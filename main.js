@@ -135,19 +135,17 @@
             const anchor = document.createElement('a');
             anchor.href = item["Public URL"];
     
-            // Convert size to a floating-point number
-            const sizeInMB = parseFloat(item["Size"]);
+            // Determine if the file size should be displayed in MB or GB
+            let fileSize = parseFloat(item["Size"]);
             let formattedSize;
-    
-            // Check if the size is greater than 1 GB
-            if (sizeInMB >= 1024) {
-                const sizeInGB = sizeInMB / 1024;
-                formattedSize = sizeInGB.toLocaleString(undefined, { maximumFractionDigits: 2 }) + " GB";
+            if (fileSize >= 1024) {
+                formattedSize = (fileSize / 1024).toFixed(2).toLocaleString() + " GB";
             } else {
-                formattedSize = sizeInMB.toLocaleString() + " MB";
+                formattedSize = fileSize.toLocaleString() + " MB";
             }
     
             anchor.textContent = item["Filename"] + " - Size: " + formattedSize;
+    
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
                 startDownload(anchor.href, 'progress-' + index, item["Filename"]);
@@ -158,7 +156,19 @@
     
             const progressBar = document.createElement('div');
             progressBar.className = 'progress-bar-line';
-            progressBar.id = '
+            progressBar.id = 'progress-' + index;
+    
+            // Check if the file has been downloaded before
+            if (localStorage.getItem(item["Filename"]) === 'downloaded') {
+                progressBar.style.width = '100%'; // Show full progress bar
+            }
+    
+            progressBarContainer.appendChild(progressBar);
+            downloadItem.appendChild(anchor);
+            downloadItem.appendChild(progressBarContainer);
+            fileListContainer.appendChild(downloadItem);
+        });
+    }
     
     
     
