@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vulcan tts dataset</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="./img/favicon.ico" rel="icon">
+    <link href="./img/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./lib/animate/animate.min.css" rel="stylesheet">
+    <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div class="container-fluid bg-white p-0">
+            <!-- Spinner Start -->
+            <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <!-- Spinner End -->
+
+
+            <!-- Navbar & Hero Start -->
+            <div class="container-fluid position-relative p-0" id="home">
+                <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top shadow-sm">
+                    <a href="https://www.depa.or.th/" class="navbar-brand p-0">
+                        <img src="./img/DEPA_logo.png"  alt="DEPA Logo">
+                    </a>
+                    <a href=" https://vulcancoalition.com/" class="navbar-brand p-0">
+                        <img src="./img/Vulcan_logo.png"  alt="Vulcan Logo">
+                    </a>
+                    <btn class="navbar-toggler rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </btn>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto py-0">
+                            <a href="./index.html" class="nav-item nav-link" alt="Home">Home</a>
+                            <a href="#Information" class="nav-item nav-link">Data Information</a>
+                            <a href="#sample" class="nav-item nav-link">Sample data</a>
+                            <a href="#partial_download" class="nav-item nav-link">Partial Download</a>
+                            <a href="#Acknowledgment" class="nav-item nav-link">Acknowledgment</a>
+                            <a href="#Credits" class="nav-item nav-link">Credits</a>
+                            <a href="./SST_page.html" class="nav-item nav-link">STT Dataset</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container-fluid bg-primary hero-header">
+                    <div class="container">
+                        <div class="align-items-center">
+                            <div class="text-center text-lg-start hero-content">
+                                <img src="./img/depa x vulcan_Logopng.png" alt="DEPA x VULCAN Logo" class="hero-logo">
+                                <div>
+                                    <h1 class="text-white mb-4">Smart Home Thai language TTS dataset</h1>
+                                    <p class="text-white pb-3 animated slideInDown">
+                                        This open Thai language speech collection, is a product of the Vulcan Coalition.
+                                        <br>This dataset is designed specifically for voice command recognition in smart home devices. It comprises a comprehensive collection of voice recordings that are used to facilitate the development and improvement of voice-activated control systems within a smart home environment. These recordings include a variety of commands that one would typically use to interact with smart home technology, such as turning lights on and off, or adjusting the thermostat.
+                                        <br>The project receives sponsorship from the Thailand Digital Economy Promotion Agency.
+                                        <br>Each audio file in the dataset has been either transcribed or recorded by individuals with disabilities. As a result, there may be variations in quality due to the differing recording devices used.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="container-fluid bg-white">
+                <div class="text-center">
+                    <a href="https://vulcan-public-storage.ap-south-1.linodeobjects.com/fulldatset/VulcanDepaDataset.zip" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill" id="downloadButton" onclick="startDownload()">DOWNLOAD DATASET</a>
+                    <div id="progressBar" class="progress-bar"></div>
+                    <p class="mb-4">File size : 128 GB <br>Click the button above to download the entire dataset in one package, or 
+                            <a href="#partial_download">click here</a>  
+                            to download each part of the dataset separately.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Navbar & Hero End -->
+            <div class="container-fluid bg-light my-6 py-5" >
+                <div class="container" id="Information">
+                    <div class="row g-5">
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 class="mb-3">Data Information</h1>
+                            <p class="mb-4">The dataset is organized into two main groups within the zip file. The main group contains data with superior voice quality, while the secondary group features recordings of lower quality, which may be useful for handling noisy data, low volume, or voices with dialects. Each folder in the dataset includes a transcription in a CSV file, named identically to the folder, and the audio recordings are provided in .flac format.</p>
+                            <p class="mb-4">
+                                The provided CSV features two columns: 'filepath' and 'instruction'. The 'filepath' column enumerates the file names, designating the location of each voice recording in the dataset. The 'instruction' column outlines the precise instructions and spoken content issued by the data provider to the individuals recording the files. Each CSV file is encoded in UTF-8, and the instructions are provided in Thai.
+                            </p>
+                            <h5>Main Group : </h5> 
+                            <p class="mb-4">The main group contains higher quality voice data and includes a total of 498,175 files.</p>
+                            <h5>Secondary Group :</h5> 
+                            <p class="mb-4">The secondary group contains lower quality voice data, useful for processing challenges such as background noise or dialects, and has a total of 141,667 files.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About Start -->
+            <div class="container-fluid my-6 py-5">
+                <div class="container" id="sample">
+                    <div class="row g-5">
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 class="mb-3">Sample Data</h1>
+                            <p class="mb-4">In this section, we present selected samples from our audio dataset...</p>
+                            <div>
+                                <div class="d-flex mb-4">
+                                    <div class="btn-square rounded-circle bg-primary text-white me-4">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <span class="visually-hidden">Checked</span>
+                                    </div>
+                            
+                                    <div>
+                                        <h5>First Example: Data with good quality in main group</h5>
+                                        <p class="mb-2">ปิดลำโพงห้องนอนชั้น 2</p>
+                                            <audio controls>
+                                                <source src="./img/sound_ex1.flac" type="audio/flac">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                    </div>
+                                </div>
+                                <!-- Second Example -->
+                                <div class="d-flex mb-4">
+                                    <div class="btn-square rounded-circle bg-primary text-white me-4">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <span class="visually-hidden">Checked</span>
+                                    </div>
+                                    <div>
+                                        <h5>Second Example: Data with less quality in secondary group</h5>
+                                        <p class="mb-2">แอร์โหมดcoolห้องนั่งเล่นชั้น 1 </p>
+                                        <audio controls>
+                                            <source src="./img/sound_ex2.flac" type="audio/flac">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                </div>
+                                <!-- Third Example -->
+                                <div class="d-flex mb-4">
+                                    <div class="btn-square rounded-circle bg-primary text-white me-4">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <span class="visually-hidden">Checked</span>
+                                    </div>
+                                    <div>
+                                        <h5>Third Example: Data with Dialect in secondary group</h5>
+                                        <p class="mb-2">ความสว่าง 26 ห้องนั้งเล่น ในอีก 8 ชั่วโมง 30 นาที</p>
+                                        <audio controls>
+                                            <source src="./img/sound_ex3.flac" type="audio/flac">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overview Start -->
+            <div class="container-fluid bg-light my-6 py-5">
+
+                <!-- Advanced Feature Start -->
+                <div class="container" id="partial_download">
+                    <div class="row g-5">
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 class="mb-3">Partial Download</h1>
+                            <p class="mb-4">To facilitate ease of access and accommodate various bandwidth capabilities, the dataset has been segmented into subfolders and is available for download in three different sizes: Large, Medium, and Small. </p>
+                            <p class="mb-4">Please note:</p>
+                            <p class="mb-4">- Combining the first 10 files from the smaller size group will yield an equivalent dataset to the first file of the next larger size group.<br>
+                                - Downloading all the zip files within a chosen size category will provide the complete dataset, identical to downloading the full dataset in one go.
+                            </p>
+                            <p class="mb-4">Choose the tab that best suits your needs to begin downloading the subfolders of the dataset.</p>
+                            
+                            <!-- Small Section -->
+                            <div class="dataset-section">
+                                <h5>Small :</h5>
+                                <p class="mb-4">- Small zip files are set up with 1,000 files, ideal for initial testing.<br>
+                                    - Main group files are labeled sgroup_{file_number}.zip, e.g., sgroup_1.zip.<br>
+                                    - Secondary group files are named s2group_{file_number}.zip, e.g., s2group_1.zip.<br>
+                                    - Each has a size of about 210 MB.
+                                </p>
+                                <div id="fileListSmall" class="vertical-menu"></div>
+                            </div>
+
+                            <!-- Medium Section -->
+                            <div class="dataset-section">
+                                <h5>Medium :</h5>
+                                <p class="mb-4">- Medium zip files hold 10,000 files each, with a matching CSV.<br>
+                                    - Main group files are named mgroup_{file_number}.zip, e.g., mgroup_1.zip.<br>
+                                    - Secondary group files follow the pattern m2group_{file_number}.zip, e.g., m2group_1.zip.<br>
+                                    - The size for each is approximately 2,100 MB.
+                                </p>
+                                <div id="fileListMedium" class="vertical-menu"></div>
+                            </div>
+                            
+                            <!-- Large Section -->
+                            <div class="dataset-section">
+                                <h5>Large :</h5>
+                                <p class="mb-4">
+                                    - Each Large zip file contains 100,000 files, with an accompanying CSV file named identically to the zip.<br>
+                                    - Zip files for the main group are named Lgroup_{file_number}.zip, e.g., Lgroup_1.zip.<br>
+                                    - For the secondary group, the naming is L2group_{file_number}.zip, e.g., L2group_1.zip.<br>
+                                    - The size of each Large zip file is approximately 21,000 MB.
+                                </p>
+                                <div id="fileListLarge" class="vertical-menu"></div>
+                            </div>
+                
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-light my-6 py-5">   
+                
+                <!-- Advanced Feature End -->
+
+                <!-- Acknowledgment Start -->
+                <div class="container" id="Acknowledgment">
+                    <div class="row g-5">
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 class="mb-3">Acknowledgment</h1>
+                            <p class="mb-4">The project receives sponsorship from the Thailand Digital Economy Promotion Agency.</p>
+                            <a href="https://www.depa.or.th/">
+                                <img src="./img/DEPA_logo.png"  alt="DEPA Logo" class="hero-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Acknowledgment End -->
+            </div>
+                <!-- Contact Start -->
+                <div class="container-fluid my-6 py-5">
+                    <div class="container" id="Credits">
+                        <div class="row g-5">
+                            <div class="wow fadeInUp" data-wow-delay="0.1s">
+                                <h1 class="mb-3">Credits</h1>
+                                <p class="mb-4">This work is in the public domain and may be used freely. However, if you wish to cite it, please do so by linking to this page or using the following citation format:</p>
+                            </div>
+                            <div class="cite">
+                                Owner        = {Vulcan coalition,Thailand Digital Economy Promotion Agency},
+                                title        = {Depa x Vulcan Smart Home Thai language TTS dataset},
+                                howpublished = {\url{https://vulcan-coalition.github.io/data_download_page/}},
+                                year         = 2024
+                            </div>
+                            <div class="text-center">
+                                <a href= "./index.html">
+                                    <button class="btn btn-primary py-sm-3 px-sm-5 rounded-pill"id="smarthome_page_Button">Back to Project Page</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact End -->          
+            <!-- Footer Start -->
+            <div class="row bg-dark text-body footer wow fadeIn" data-wow-delay="0.1s">
+                <div class=" px-lg-5">
+                    <div class="text-white text-center">
+                        <p>© Copyright 2024
+                        <a href="https://vulcancoalition.com/">vulcancoalition.com</a>
+                        All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+            <!-- Back to Top -->
+            <a href="#home" class="back-to-top-btn-lg text-white btn-primary btn-lg-square back-to-top" alt="Back to top"><i class="bi bi-arrow-up"></i>
+            </a>
+        </div>
+        <div>
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="./lib/wow/wow.min.js"></script>
+            <script src="./lib/easing/easing.min.js"></script>
+            <script src="./lib/waypoints/waypoints.min.js"></script>
+            <script src="./lib/counterup/counterup.min.js"></script>
+            <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+
+            <!-- Template Javascript -->
+            <script src="./main.js"></script>
+        </div>
+</body>
+
+</html>
