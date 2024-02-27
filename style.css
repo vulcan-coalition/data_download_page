@@ -50,7 +50,7 @@ h4,
 
 h5{
     padding: 15px 0;
-},
+}
 h6,
 .fw-medium {
     font-weight: 500 !important;
@@ -137,7 +137,7 @@ h6,
 }
 
 .sticky-top.navbar .navbar-nav .nav-link {
-    padding: 20px 0;
+    padding: 35px 0;
     color: var(--dark);
 }
 
@@ -368,7 +368,7 @@ h6,
     list-style-type: none;
     padding: 0;
     border: 1px solid #ddd;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .vertical-menu .download-item {
