@@ -125,7 +125,12 @@
     
     function createDownloadList(data, containerId) {
         const fileListContainer = document.getElementById(containerId);
-    
+        if (!fileListContainer) {
+            console.error('Element with ID ' + containerId + ' not found.');
+            return; // Exit the function if the container doesn't exist
+        }
+
+
         data.forEach((item, index) => {
             const downloadItem = document.createElement('div');
             downloadItem.className = 'download-item';
