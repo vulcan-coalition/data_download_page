@@ -165,15 +165,11 @@
         });
     }
     
-
-    
-
-    // Usage example for each JSON file and container ID
-    loadJsonData('./img/file_upload_linkl.json', "fileListLarge");
-    loadJsonData('./img/file_upload_linkm.json', "fileListMedium");
-    loadJsonData('./img/file_upload_links.json', "fileListSmall");
-
-
+    $(document).ready(function() {
+        loadJsonData('./img/file_upload_linkl.json', "fileListLarge");
+        loadJsonData('./img/file_upload_linkm.json', "fileListMedium");
+        loadJsonData('./img/file_upload_links.json', "fileListSmall");
+    });
     
 
     
