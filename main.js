@@ -126,7 +126,6 @@
     function createDownloadList(data, containerId) {
         const fileListContainer = document.getElementById(containerId);
         if (!fileListContainer) {
-            console.error('Element with ID ' + containerId + ' not found.');
             return; // Exit the function if the container doesn't exist
         }
 
